@@ -130,7 +130,10 @@ function App() {
           </div>
         </div>
       </div>
-      <a href="/">Open-source code</a> by Anna Cho
+      <a href="https://github.com/annacho10/Weather-react" target="_blank">
+        Open-source code
+      </a>{" "}
+      by Anna Cho
     </div>
   );
 }
