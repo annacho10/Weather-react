@@ -130,7 +130,11 @@ function App() {
           </div>
         </div>
       </div>
-      <a href="https://github.com/annacho10/Weather-react" target="_blank">
+      <a
+        href="https://github.com/annacho10/Weather-react"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Open-source code
       </a>{" "}
       by Anna Cho
