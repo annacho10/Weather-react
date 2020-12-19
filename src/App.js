@@ -52,7 +52,7 @@ function App() {
         <div className="row">
           <div className="col-sm">
             <ul>
-              <li>Thur</li>
+              <li>Thu</li>
               <li>10° 7°</li>
               <ReactAnimatedWeather
                 icon="SLEET"
@@ -65,7 +65,7 @@ function App() {
           </div>
           <div className="col-sm">
             <ul>
-              <li>Thur</li>
+              <li>Fri</li>
               <li>10° 7°</li>
               <ReactAnimatedWeather
                 icon="CLEAR_DAY"
@@ -78,7 +78,7 @@ function App() {
           </div>
           <div className="col-sm">
             <ul>
-              <li>Thur</li>
+              <li>Sat</li>
               <li>10° 7°</li>
               <ReactAnimatedWeather
                 icon="RAIN"
@@ -91,7 +91,7 @@ function App() {
           </div>
           <div className="col-sm">
             <ul>
-              <li>Thur</li>
+              <li>Sun</li>
               <li>10° 7°</li>
               <ReactAnimatedWeather
                 icon="FOG"
@@ -104,7 +104,7 @@ function App() {
           </div>
           <div className="col-sm">
             <ul>
-              <li>Thur</li>
+              <li>Mon</li>
               <li>10° 7°</li>
               <ReactAnimatedWeather
                 icon="SNOW"
@@ -117,7 +117,7 @@ function App() {
           </div>
           <div className="col-sm">
             <ul>
-              <li>Thur</li>
+              <li>Tue</li>
               <li>10° 7°</li>
               <ReactAnimatedWeather
                 icon="PARTLY_CLOUDY_DAY"
