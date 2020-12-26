@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather dafaultCity="seoul" />
+        <Weather defaultCity="london" />
         <small>
           <a
             href="https://github.com/annacho10/Weather-react"
