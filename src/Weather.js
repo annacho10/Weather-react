@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import ReactAnimatedWeather from "react-animated-weather";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -13,7 +14,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       maxTemperaure: response.data.main.temp_max,
       minTemperature: response.data.main.temp_min,
-      date: "Wednesday 13:59",
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       visibility: response.data.visibility / 1000,
       humidity: response.data.main.humidity,
@@ -56,7 +57,7 @@ export default function Weather(props) {
           H:{Math.round(weatherData.maxTemperaure)}° L:
           {Math.round(weatherData.minTemperature)}°
         </h4>
-        Last updated: {weatherData.date}
+        Last updated: <FormattedDate date={weatherData.date} />
         <div>
           <small>Wind</small> {Math.round(weatherData.wind)}mph{" "}
           <small>Visibility</small> {weatherData.visibility}km{" "}
