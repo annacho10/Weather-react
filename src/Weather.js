@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Weather.css";
-import ReactAnimatedWeather from "react-animated-weather";
 import CurrentWeather from "./CurrentWeather";
+import ReactAnimatedWeather from "react-animated-weather";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,6 +11,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      icon: response.data.weather[0].icon,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       maxTemperaure: response.data.main.temp_max,
@@ -42,23 +43,13 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-10">
-              <input
-                type="search"
-                className="form-control"
-                placeholder="Enter city"
-                autoFocus="on"
-                onChange={handleCityChange}
-              />
-            </div>
-            <div className="col-1">
-              <input type="submit" className="btn btn-light" value="🔍" />
-            </div>
-            <div className="col-1">
-              <input type="submit" className="btn btn-light" value="📍" />
-            </div>
-          </div>
+          <input
+            type="search"
+            className="form-control"
+            placeholder="🔍 Enter city"
+            autoFocus="on"
+            onChange={handleCityChange}
+          />
         </form>
         <CurrentWeather data={weatherData} />
         <div className="row">
