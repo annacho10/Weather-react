@@ -1,15 +1,14 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import CurrentTemperature from "./CurrentTemperature";
 
 export default function CurrentWeather(props) {
   return (
     <div>
       <h2>{props.data.city}</h2>
       <WeatherIcon code={props.data.icon} />
-      <span className="temperature">{Math.round(props.data.temperature)}°</span>
-      <span className="unit">C | F</span>
+      <CurrentTemperature celcius={props.data.temperature} />
       <h3 className="text-capitalize">{props.data.description}</h3>
       <h4>
         H:{Math.round(props.data.maxTemperaure)}° L:
