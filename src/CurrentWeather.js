@@ -7,7 +7,7 @@ export default function CurrentWeather(props) {
   return (
     <div>
       <h2>{props.data.city}</h2>
-      <WeatherIcon code={props.data.icon} />
+      <WeatherIcon code={props.data.icon} size={64} />
       <CurrentTemperature celcius={props.data.temperature} />
       <h3 className="text-capitalize">{props.data.description}</h3>
       <h4>

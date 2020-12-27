@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CurrentWeather from "./CurrentWeather";
-import ReactAnimatedWeather from "react-animated-weather";
+import Forecast from "./Forecast";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -52,86 +52,7 @@ export default function Weather(props) {
           />
         </form>
         <CurrentWeather data={weatherData} />
-        <div className="row">
-          <div className="col-sm">
-            <ul>
-              <li>Thu</li>
-              <li>10° 7°</li>
-              <ReactAnimatedWeather
-                icon="SLEET"
-                size={48}
-                color="white"
-                animate={true}
-              />
-              <li>Sleet</li>
-            </ul>
-          </div>
-          <div className="col-sm">
-            <ul>
-              <li>Fri</li>
-              <li>10° 7°</li>
-              <ReactAnimatedWeather
-                icon="CLEAR_DAY"
-                size={48}
-                color="white"
-                animate={true}
-              />{" "}
-              <li>Clear</li>
-            </ul>
-          </div>
-          <div className="col-sm">
-            <ul>
-              <li>Sat</li>
-              <li>10° 7°</li>
-              <ReactAnimatedWeather
-                icon="RAIN"
-                size={48}
-                color="white"
-                animate={true}
-              />{" "}
-              <li>Rain</li>
-            </ul>
-          </div>
-          <div className="col-sm">
-            <ul>
-              <li>Sun</li>
-              <li>10° 7°</li>
-              <ReactAnimatedWeather
-                icon="FOG"
-                size={48}
-                color="white"
-                animate={true}
-              />{" "}
-              <li>Fog</li>
-            </ul>
-          </div>
-          <div className="col-sm">
-            <ul>
-              <li>Mon</li>
-              <li>10° 7°</li>
-              <ReactAnimatedWeather
-                icon="SNOW"
-                size={48}
-                color="white"
-                animate={true}
-              />{" "}
-              <li>Snow</li>
-            </ul>
-          </div>
-          <div className="col-sm">
-            <ul>
-              <li>Tue</li>
-              <li>10° 7°</li>
-              <ReactAnimatedWeather
-                icon="PARTLY_CLOUDY_DAY"
-                size={48}
-                color="white"
-                animate={true}
-              />{" "}
-              <li>Cloudy</li>
-            </ul>
-          </div>
-        </div>
+        <Forecast city={weatherData.city} />
       </div>
     );
   } else {
